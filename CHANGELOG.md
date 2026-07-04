@@ -1,18 +1,70 @@
 # Changelog
 
-## v1.0 - Initial Release - 2026-07-04
+All notable changes to this project will be documented in this file.
+
+This project follows Semantic Versioning (SemVer).
+
+---
+
+## [2.0.0] - 2026-07-04
 
 ### Added
-- AI Assistant using Google Gemini
-- Tool Calling
-- Long-Term Memory
-- Calculator Tool
-- Weather Tool
-- File Reading Tool
 
-### Project Structure
-- main.py
-- config.py
-- prompts.py
-- tools.py
-- memory.py
+- Persistent conversation history.
+- Conversation loading and saving utilities.
+- Custom conversation engine.
+- Manual request building.
+- Long-term memory persistence.
+
+### Changed
+
+- Replaced SDK chat sessions with manual conversation management.
+- Replaced `chat.send_message()` with `client.models.generate_content()`.
+- Improved project architecture.
+- Simplified request pipeline.
+
+### Tested
+
+- Conversation persistence.
+- Conversation context.
+- Long-term memory.
+- Tool calling.
+- Calculator.
+- Weather.
+- File reader.
+
+---
+
+## [1.5.0] - 2026-07-03
+
+### Added
+
+- Conversation management module.
+- Conversation storage.
+- Conversation loading.
+- Conversation saving.
+- Conversation history retrieval.
+
+### Changed
+
+- Refactored project architecture.
+- Separated conversation logic from the main application.
+
+---
+
+## [1.0.0] - 2026-07-02
+
+### Added
+
+- Initial AI assistant.
+- Google Gemini integration.
+- Function calling.
+- Memory extraction.
+- Memory storage.
+- Weather tool.
+- Calculator tool.
+- File reader.
+- Secret code tool.
+- System prompt support.
+
+### Initial Release

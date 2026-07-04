@@ -12,39 +12,71 @@ from memory import (
     update_memory,
     extract_memory
 )
+from conversation import(
+    load_conversation,
+    save_conversation,
+    append_message,
+    get_recent_conversation
+)
 from google import genai
 import json
 
-memory = load_memory()
-system_prompt = SYSTEM_PROMPT.format(memory = json.dumps(memory, indent = 4))
 
-chat = client.chats.create(
-    model = MODEL_NAME,
-    config = genai.types.GenerateContentConfig(
-        system_instruction = system_prompt,
-        tools = [
-            get_current_time,
-            get_secret_code,
-            get_weather,
-            calculator,
-            read_file
-        ]
-    )
-    
+memory = load_memory()
+conversation = load_conversation()
+
+system_prompt = SYSTEM_PROMPT.format(
+    memory=json.dumps(memory, indent=4)
 )
 
+print("Type 'exit' to quit.")
 
-print ("Type 'exit' to quit.")
 while True:
     user_message = input("Ask a question: ").strip()
+
     if user_message == "exit":
         break
-    elif user_message == "":
-        print("Please enter a question or type 'exit' to quit.")
+
+    if user_message == "":
+        print("Please enter a question.")
         continue
-    else:
-        response = chat.send_message(user_message)
-        print(response.text.strip())
-        new_data = extract_memory(user_message)
-        update_memory(memory, new_data)
-        
+
+    # Save user message
+    append_message(conversation, "user", user_message)
+
+    # Get recent history
+    recent_conversation = get_recent_conversation(conversation)
+
+    # Build contents
+    contents = recent_conversation
+
+    # Generate response
+    try:
+        response = client.models.generate_content(
+            model=MODEL_NAME,
+            contents=contents,
+            config=genai.types.GenerateContentConfig(
+                system_instruction=system_prompt,
+                tools=[
+                    get_current_time,
+                    get_secret_code,
+                    get_weather,
+                    calculator,
+                    read_file,
+                ]
+            )
+        )
+    except Exception as e:
+        print(e)    
+
+    print(response.text.strip())
+
+    # Save assistant message
+    append_message(conversation, "model", response.text)
+
+    # Update memory
+    new_data = extract_memory(user_message)
+    update_memory(memory, new_data)
+
+    # Save conversation
+    save_conversation(conversation)
