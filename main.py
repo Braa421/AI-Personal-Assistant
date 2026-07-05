@@ -10,7 +10,8 @@ from tools import (
 from memory import (
     load_memory,
     update_memory,
-    extract_memory
+    extract_memory,
+    relevant_memory
 )
 from conversation import(
     load_conversation,
@@ -25,9 +26,6 @@ import json
 memory = load_memory()
 conversation = load_conversation()
 
-system_prompt = SYSTEM_PROMPT.format(
-    memory=json.dumps(memory, indent=4)
-)
 
 print("Type 'exit' to quit.")
 
@@ -46,7 +44,10 @@ while True:
 
     # Get recent history
     recent_conversation = get_recent_conversation(conversation)
-
+    relevant = relevant_memory(user_message, memory)
+    system_prompt = SYSTEM_PROMPT.format(
+    memory=json.dumps(relevant, indent=4)
+    )
     # Build contents
     contents = recent_conversation
 

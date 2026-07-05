@@ -6,6 +6,26 @@ This project follows Semantic Versioning (SemVer).
 
 ---
 
+## [2.1.0] - 2026-07-05
+
+### Added
+
+- Added relevant memory selection.
+- The agent now selects only the most relevant long-term memories for each user message.
+
+### Changed
+
+- The system prompt now receives only relevant long-term memory instead of the entire memory store.
+
+### Tested
+
+- Relevant memory selection.
+- Memory extraction.
+- Memory updates.
+- Conversation flow.
+
+---
+
 ## [2.0.0] - 2026-07-04
 
 ### Added

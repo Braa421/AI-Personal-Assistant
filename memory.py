@@ -1,6 +1,6 @@
 import json
 from config import client, MODEL_NAME, MEMORY_FILE
-from prompts import MEMORY_PROMPT
+from prompts import MEMORY_PROMPT, MEMORY_SELECTOR_PROMPT
 
 def load_memory()-> dict:
     """
@@ -37,4 +37,23 @@ def extract_memory(user_message: str)-> dict:
         return new_data
     except json.JSONDecodeError:
         print("Failed to extract memory.")
+        return {}
+    
+def relevant_memory(user_message: str, memory: dict) -> dict:
+    prompt = MEMORY_SELECTOR_PROMPT.format(
+        user_message=user_message,
+        memory=json.dumps(memory, indent=4)
+    )
+
+    response = client.models.generate_content(
+        model=MODEL_NAME,
+        contents=prompt
+    )
+
+    result = response.text
+
+    try:
+        result = result.replace("```json", "").replace("```", "").strip()
+        return json.loads(result)
+    except json.JSONDecodeError:
         return {}

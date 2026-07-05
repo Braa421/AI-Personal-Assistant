@@ -15,6 +15,7 @@ The project focuses on building a modular and extensible assistant from scratch 
 - Custom conversation engine
 - Modular project architecture
 - Configurable system prompt
+- Relevant memory retrieval 
 
 ## Project Structure
 
@@ -64,7 +65,7 @@ The project is divided into independent modules.
 - [x] Version 1 — Basic Assistant
 - [x] Version 1.5 — Conversation Persistence
 - [x] Version 2.0 — Custom Conversation Engine
-- [ ] Version 2.1 — Relevant Memory Retrieval
+- [x] Version 2.1 — Relevant Memory Retrieval
 - [ ] Version 3.0 — RAG Integration
 - [ ] Version 4.0 — MCP Support
 - [ ] Version 5.0 — Desktop Interface

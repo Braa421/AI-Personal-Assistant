@@ -37,3 +37,22 @@ User message:
 
 {user_message}
 """
+
+MEMORY_SELECTOR_PROMPT = """
+You are a memory retrieval system.
+
+Your task is to select only the memory entries that are relevant to answering the user's current message.
+
+You will receive:
+1. The user's current message.
+2. The user's complete long-term memory.
+
+Instructions:
+- Return only the memory entries that are directly relevant.
+- Do not modify any memory values.
+- Do not create new information.
+- If multiple memory entries are relevant, return all of them.
+- If no memory is relevant, return an empty JSON object: {{}}.
+- Your response must be valid JSON only.
+- Do not include explanations, markdown, or extra text.
+"""

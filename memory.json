@@ -1,4 +1,7 @@
 {
     "name": "braa",
-    "favorite_book": "the avengers"
+    "favorite_book": "the avengers",
+    "preferences": {
+        "gender": "male"
+    }
 }
