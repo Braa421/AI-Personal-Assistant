@@ -6,6 +6,30 @@ This project follows Semantic Versioning (SemVer).
 
 ---
 
+## [2.3.0] - 2026-07-07
+
+### Added
+
+- Safe LLM JSON parser.
+- Dedicated LLM parsing module.
+- Reusable JSON parsing utility for model responses.
+
+### Changed
+
+- Replaced direct `json.loads()` calls with `parse_llm_json()`.
+- Improved JSON parsing reliability for LLM-generated responses.
+- Refactored memory-related modules to use the new parser.
+
+### Tested
+
+- Memory extraction.
+- Relevant memory retrieval.
+- Multiple memory extraction.
+- Conversation persistence.
+- LLM JSON parsing.
+
+---
+
 ## [2.2.0] - 2026-07-07
 
 ### Added

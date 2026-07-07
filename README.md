@@ -17,6 +17,7 @@ The project focuses on building a modular and extensible assistant from scratch 
 - Configurable system prompt
 - Relevant memory retrieval 
 - Modular request builder
+- Safe LLM JSON parsing
 
 ## Project Structure
 
@@ -29,6 +30,7 @@ AI Personal Assistant/
 ├── memory.py
 ├── conversation.py
 ├── request_builder.py
+├── llm_parser.py
 ├── tools.py
 │
 ├── memory.json
@@ -47,6 +49,7 @@ The project is divided into independent modules.
 - `memory.py` → Long-term memory management
 - `conversation.py` → Conversation persistence
 - `request_builder.py` → LLM request construction
+- `llm_parser.py` → Parses and validates LLM JSON responses
 - `tools.py` → External tools
 - `prompts.py` → System and memory prompts
 - `main.py` → Application entry point
@@ -62,7 +65,7 @@ The project is divided into independent modules.
 
 ## Current Version
 
-**v2.2.0**
+**v2.3.0**
 
 ## Roadmap
 
@@ -71,7 +74,7 @@ The project is divided into independent modules.
 - [x] v2.0 — Custom Conversation Engine
 - [x] v2.1 — Relevant Memory Retrieval
 - [x] v2.2 — Request Builder
-- [ ] v2.3 — Response Parser
+- [x] v2.3 — Safe LLM JSON
 - [ ] v2.4 — Reliability & Logging
 - [ ] v2.5 — Smart Context Management
 - [ ] v3.0 — RAG Integration

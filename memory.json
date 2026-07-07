@@ -5,5 +5,8 @@
         "gender": "male"
     },
     "favorite_tv_show": "breaking bad",
-    "favorite_movie": "Venom"
+    "favorite_movie": "Venom",
+    "favorite_things": "football",
+    "skills": "playing CDM in football",
+    "goals": "address overweight issue"
 }
