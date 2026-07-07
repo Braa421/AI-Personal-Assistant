@@ -12,6 +12,7 @@ from conversation import(
 from request_builder import(
     build_request
 )
+from llm import generate
 from google import genai
 import json
 
@@ -39,7 +40,10 @@ while True:
     request = build_request(user_message, memory, conversation,)
 
     try:
-        response = client.models.generate_content(**request)
+        response = generate(
+            contents = request["contents"],
+            config = request["config"]
+        )
         print(response.text)
     except Exception as e:
         print(e)

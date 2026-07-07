@@ -3,6 +3,7 @@ from config import client, MODEL_NAME, MEMORY_FILE
 from prompts import MEMORY_PROMPT, MEMORY_SELECTOR_PROMPT
 from llm_parser import parse_llm_json
 from exceptions import ParserError
+from llm import generate
 
 def load_memory()-> dict:
     """
@@ -26,10 +27,7 @@ def update_memory(memory: dict, new_data: dict)-> None:
 
 def extract_memory(user_message: str)-> dict:
     prompt = MEMORY_PROMPT.format(user_message = user_message)
-    memory_response = client.models.generate_content(
-        model = MODEL_NAME,
-        contents = prompt
-    )
+    memory_response = generate(prompt)
     try:
         new_data = parse_llm_json(memory_response.text)
         return new_data
@@ -43,10 +41,7 @@ def retrieve_memory(user_message: str, memory: dict) -> dict:
         memory=json.dumps(memory, indent=4)
     )
 
-    response = client.models.generate_content(
-        model=MODEL_NAME,
-        contents=prompt
-    )
+    response = generate(prompt)
 
     try:
         return parse_llm_json(response.text)

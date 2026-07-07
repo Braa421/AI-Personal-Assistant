@@ -19,6 +19,9 @@ The project focuses on building a modular and extensible assistant from scratch 
 - Modular request builder
 - Safe LLM JSON parsing
 - Custom exception handling
+- LLM wrapper
+- Retry mechanism
+- Custom logging
 
 ## Project Structure
 
@@ -33,6 +36,8 @@ AI Personal Assistant/
 ├── request_builder.py
 ├── llm_parser.py
 ├── exceptions.py
+├── llm.py
+├── logger.py
 ├── tools.py
 │
 ├── memory.json
@@ -56,6 +61,8 @@ The project is divided into independent modules.
 - `prompts.py` → System and memory prompts
 - `main.py` → Application entry point
 - `exceptions.py` → Custom application exceptions
+- `llm.py` → LLM communication layer
+- `logger.py` → Application logging
 
 ## Technologies
 
@@ -68,7 +75,7 @@ The project is divided into independent modules.
 
 ## Current Version
 
-**v2.4.0**
+**v2.5.0**
 
 ## Roadmap
 
@@ -79,7 +86,7 @@ The project is divided into independent modules.
 - [x] v2.2 — Request Builder
 - [x] v2.3 — Safe LLM JSON
 - [x] v2.4 — Reliability & Error Handling
-- [ ] v2.5 — Reliability Enhancements (Logging & Retry)
+- [x] v2.5 — Reliability Enhancements (Logging & Retry)
 - [ ] v3.0 — RAG Integration
 - [ ] v4.0 — MCP Support
 - [ ] v5.0 — Desktop Interface

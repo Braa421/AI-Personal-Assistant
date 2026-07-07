@@ -6,6 +6,31 @@ This project follows Semantic Versioning (SemVer).
 
 ---
 
+## [2.5.0] - 2026-07-07
+
+### Added
+
+- LLM wrapper module.
+- Retry mechanism for LLM requests.
+- Custom logging system.
+- Application log file (`assistant.log`).
+
+### Changed
+
+- Centralized all LLM requests through `llm.py`.
+- Improved LLM reliability with automatic retries.
+- Improved error handling using `LLMError`.
+- Refactored project architecture to separate LLM communication from application logic.
+
+### Tested
+
+- LLM wrapper.
+- Retry mechanism.
+- LLM exception handling.
+- Logging system.
+
+---
+
 ## [2.4.0] - 2026-07-07
 
 ### Added
