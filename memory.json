@@ -3,5 +3,7 @@
     "favorite_book": "the avengers",
     "preferences": {
         "gender": "male"
-    }
+    },
+    "favorite_tv_show": "breaking bad",
+    "favorite_movie": "Venom"
 }

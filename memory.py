@@ -39,7 +39,7 @@ def extract_memory(user_message: str)-> dict:
         print("Failed to extract memory.")
         return {}
     
-def relevant_memory(user_message: str, memory: dict) -> dict:
+def retrieve_memory(user_message: str, memory: dict) -> dict:
     prompt = MEMORY_SELECTOR_PROMPT.format(
         user_message=user_message,
         memory=json.dumps(memory, indent=4)

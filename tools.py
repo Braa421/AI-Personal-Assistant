@@ -7,12 +7,6 @@ def get_current_time():
     now = datetime.datetime.now()
     return now.strftime("%X")
 
-def get_secret_code():
-    """
-    Returns a secret code.
-    """
-    return "Braa421"
-
 def get_weather(city: str, unit: str) -> str:
     """
     Return the temperature in the given city in celsius or fahrenheit according to user choice

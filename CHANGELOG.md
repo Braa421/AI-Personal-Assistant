@@ -6,6 +6,33 @@ This project follows Semantic Versioning (SemVer).
 
 ---
 
+## [2.2.0] - 2026-07-07
+
+### Added
+
+- Request builder module.
+- Request construction utilities.
+- System prompt builder.
+- Conversation contents builder.
+- Generation configuration builder.
+
+### Changed
+
+- Refactored request construction into a dedicated module.
+- Simplified the main application loop.
+- Improved project architecture by separating request-building responsibilities.
+- Centralized LLM request creation.
+
+### Tested
+
+- Request building.
+- System prompt generation.
+- Conversation context building.
+- Generation configuration.
+- End-to-end request pipeline.
+
+---
+
 ## [2.1.0] - 2026-07-05
 
 ### Added

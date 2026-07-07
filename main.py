@@ -1,23 +1,16 @@
-from config import client, MODEL_NAME
-from prompts import SYSTEM_PROMPT
-from tools import (
-    get_current_time,
-    get_secret_code,
-    get_weather,
-    calculator,
-    read_file
-)
+from config import client
 from memory import (
     load_memory,
     update_memory,
     extract_memory,
-    relevant_memory
 )
 from conversation import(
     load_conversation,
     save_conversation,
     append_message,
-    get_recent_conversation
+)
+from request_builder import(
+    build_request
 )
 from google import genai
 import json
@@ -42,35 +35,14 @@ while True:
     # Save user message
     append_message(conversation, "user", user_message)
 
-    # Get recent history
-    recent_conversation = get_recent_conversation(conversation)
-    relevant = relevant_memory(user_message, memory)
-    system_prompt = SYSTEM_PROMPT.format(
-    memory=json.dumps(relevant, indent=4)
-    )
-    # Build contents
-    contents = recent_conversation
 
-    # Generate response
+    request = build_request(user_message, memory, conversation,)
+
     try:
-        response = client.models.generate_content(
-            model=MODEL_NAME,
-            contents=contents,
-            config=genai.types.GenerateContentConfig(
-                system_instruction=system_prompt,
-                tools=[
-                    get_current_time,
-                    get_secret_code,
-                    get_weather,
-                    calculator,
-                    read_file,
-                ]
-            )
-        )
+        response = client.models.generate_content(**request)
+        print(response.text)
     except Exception as e:
-        print(e)    
-
-    print(response.text.strip())
+        print(e)
 
     # Save assistant message
     append_message(conversation, "model", response.text)

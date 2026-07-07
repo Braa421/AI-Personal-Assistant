@@ -16,6 +16,7 @@ The project focuses on building a modular and extensible assistant from scratch 
 - Modular project architecture
 - Configurable system prompt
 - Relevant memory retrieval 
+- Modular request builder
 
 ## Project Structure
 
@@ -27,6 +28,7 @@ AI Personal Assistant/
 ├── prompts.py
 ├── memory.py
 ├── conversation.py
+├── request_builder.py
 ├── tools.py
 │
 ├── memory.json
@@ -44,6 +46,7 @@ The project is divided into independent modules.
 - `config.py` → Application configuration
 - `memory.py` → Long-term memory management
 - `conversation.py` → Conversation persistence
+- `request_builder.py` → LLM request construction
 - `tools.py` → External tools
 - `prompts.py` → System and memory prompts
 - `main.py` → Application entry point
@@ -55,20 +58,25 @@ The project is divided into independent modules.
 - Function Calling
 - JSON
 - Git & GitHub
+- Modular Software Architecture
 
 ## Current Version
 
-**v2.0.0**
+**v2.2.0**
 
 ## Roadmap
 
-- [x] Version 1 — Basic Assistant
-- [x] Version 1.5 — Conversation Persistence
-- [x] Version 2.0 — Custom Conversation Engine
-- [x] Version 2.1 — Relevant Memory Retrieval
-- [ ] Version 3.0 — RAG Integration
-- [ ] Version 4.0 — MCP Support
-- [ ] Version 5.0 — Desktop Interface
+- [x] v1.0 — Basic Assistant
+- [x] v1.5 — Conversation Persistence
+- [x] v2.0 — Custom Conversation Engine
+- [x] v2.1 — Relevant Memory Retrieval
+- [x] v2.2 — Request Builder
+- [ ] v2.3 — Response Parser
+- [ ] v2.4 — Reliability & Logging
+- [ ] v2.5 — Smart Context Management
+- [ ] v3.0 — RAG Integration
+- [ ] v4.0 — MCP Support
+- [ ] v5.0 — Desktop Interface
 
 ## License
 
