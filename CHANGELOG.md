@@ -6,6 +6,27 @@ This project follows Semantic Versioning (SemVer).
 
 ---
 
+## [2.4.0] - 2026-07-07
+
+### Added
+
+- Custom exceptions module.
+- ParserError exception.
+
+### Changed
+
+- Refactored LLM JSON parsing to use custom exceptions.
+- Improved error handling for memory extraction.
+
+### Tested
+
+- LLM JSON parsing.
+- Parser exception handling.
+- Memory extraction.
+- Relevant memory retrieval.
+
+---
+
 ## [2.3.0] - 2026-07-07
 
 ### Added

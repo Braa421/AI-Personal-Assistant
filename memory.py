@@ -2,6 +2,7 @@ import json
 from config import client, MODEL_NAME, MEMORY_FILE
 from prompts import MEMORY_PROMPT, MEMORY_SELECTOR_PROMPT
 from llm_parser import parse_llm_json
+from exceptions import ParserError
 
 def load_memory()-> dict:
     """
@@ -32,8 +33,8 @@ def extract_memory(user_message: str)-> dict:
     try:
         new_data = parse_llm_json(memory_response.text)
         return new_data
-    except json.JSONDecodeError:
-        print("Failed to extract memory.")
+    except ParserError as e:
+        print(f"Failed to extract memory: {e}")
         return {}
     
 def retrieve_memory(user_message: str, memory: dict) -> dict:
