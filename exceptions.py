@@ -9,3 +9,6 @@ class ParserError(Exception):
 
 class ToolError(Exception):
     pass
+
+class UnsupportedFileTypeError(Exception):
+    pass

@@ -1,0 +1,2 @@
+Hello from my first RAG document.
+This is a test.

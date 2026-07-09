@@ -12,6 +12,7 @@ from conversation import(
 from request_builder import(
     build_request
 )
+from rag.loader import load_document
 from llm import generate
 from google import genai
 import json
@@ -20,7 +21,8 @@ import json
 memory = load_memory()
 conversation = load_conversation()
 
-
+text = load_document("notes.txt")
+print(text)
 print("Type 'exit' to quit.")
 
 while True:

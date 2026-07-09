@@ -22,6 +22,9 @@ The project focuses on building a modular and extensible assistant from scratch 
 - LLM wrapper
 - Retry mechanism
 - Custom logging
+- RAG foundation
+- Document loader
+- TXT document support
 
 ## Project Structure
 
@@ -39,6 +42,13 @@ AI Personal Assistant/
 ├── llm.py
 ├── logger.py
 ├── tools.py
+├──rag/
+│   ├── loader.py
+│   ├── chunker.py
+│   ├── embeddings.py
+│   ├── vector_store.py
+│   ├── retriever.py
+│   ├── pipeline.py
 │
 ├── memory.json
 ├── conversation.json
@@ -63,6 +73,12 @@ The project is divided into independent modules.
 - `exceptions.py` → Custom application exceptions
 - `llm.py` → LLM communication layer
 - `logger.py` → Application logging
+- `rag/loader.py` → Document loading
+- `rag/chunker.py` → Text chunking
+- `rag/embeddings.py` → Embedding generation
+- `rag/vector_store.py` → Vector storage
+- `rag/retriever.py` → Similarity retrieval
+- `rag/pipeline.py` → End-to-end RAG pipeline
 
 ## Technologies
 
@@ -75,7 +91,7 @@ The project is divided into independent modules.
 
 ## Current Version
 
-**v2.5.0**
+**v3.0.0**
 
 ## Roadmap
 
@@ -87,9 +103,16 @@ The project is divided into independent modules.
 - [x] v2.3 — Safe LLM JSON
 - [x] v2.4 — Reliability & Error Handling
 - [x] v2.5 — Reliability Enhancements (Logging & Retry)
-- [ ] v3.0 — RAG Integration
+- [x] v3.0 — RAG Integration`
+- [ ] v3.1 — Embeddings & Vector Store
+- [ ] v3.2 — Similarity Retrieval
+- [ ] v3.3 — RAG Pipeline
+- [ ] v3.4 — Multi-Document Support
+- [ ] v3.5 — Context Optimization
 - [ ] v4.0 — MCP Support
-- [ ] v5.0 — Desktop Interface
+- [ ] v5.0 — Desktop Application
+- [ ] v6.0 — Voice Assistant
+- [ ] v7.0 — Multi-Agent System
 
 ## License
 

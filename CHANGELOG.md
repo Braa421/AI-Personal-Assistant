@@ -6,6 +6,27 @@ This project follows Semantic Versioning (SemVer).
 
 ---
 
+## [3.0.0] - 2026-07-09
+
+### Added
+
+- Initial RAG project structure.
+- RAG loader module.
+- TXT document loader.
+- Unsupported file type exception.
+
+### Changed
+
+- Organized RAG components into a dedicated `rag` package.
+- Prepared the project architecture for document retrieval.
+
+### Tested
+
+- TXT document loading.
+- Unsupported file type handling.
+
+---
+
 ## [2.5.0] - 2026-07-07
 
 ### Added
