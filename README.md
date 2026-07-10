@@ -25,6 +25,10 @@ The project focuses on building a modular and extensible assistant from scratch 
 - RAG foundation
 - Document loader
 - TXT document support
+- Text chunking
+- Configurable chunk overlap
+- Gemini embeddings
+- JSON vector store
 
 ## Project Structure
 
@@ -88,6 +92,7 @@ The project is divided into independent modules.
 - JSON
 - Git & GitHub
 - Modular Software Architecture
+- Retrieval-Augmented Generation (RAG)
 
 ## Current Version
 
@@ -103,12 +108,11 @@ The project is divided into independent modules.
 - [x] v2.3 — Safe LLM JSON
 - [x] v2.4 — Reliability & Error Handling
 - [x] v2.5 — Reliability Enhancements (Logging & Retry)
-- [x] v3.0 — RAG Integration`
-- [ ] v3.1 — Embeddings & Vector Store
-- [ ] v3.2 — Similarity Retrieval
-- [ ] v3.3 — RAG Pipeline
-- [ ] v3.4 — Multi-Document Support
-- [ ] v3.5 — Context Optimization
+- [x] v3.0 — RAG Foundation
+- [ ] v3.1 — Similarity Retrieval
+- [ ] v3.2 — RAG Pipeline
+- [ ] v3.3 — Multi-Document Support
+- [ ] v3.4 — Context Optimization
 - [ ] v4.0 — MCP Support
 - [ ] v5.0 — Desktop Application
 - [ ] v6.0 — Voice Assistant

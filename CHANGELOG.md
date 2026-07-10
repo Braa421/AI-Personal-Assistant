@@ -6,24 +6,29 @@ This project follows Semantic Versioning (SemVer).
 
 ---
 
-## [3.0.0] - 2026-07-09
+## [3.0.0] - 2026-07-10
 
 ### Added
 
-- Initial RAG project structure.
-- RAG loader module.
+- Initial Retrieval-Augmented Generation (RAG) architecture.
 - TXT document loader.
-- Unsupported file type exception.
+- Text chunking with configurable chunk size and overlap.
+- Gemini embedding generation.
+- JSON-based vector store.
+- Vector persistence utilities.
+- Vector store configuration.
 
 ### Changed
 
 - Organized RAG components into a dedicated `rag` package.
-- Prepared the project architecture for document retrieval.
+- Extended project architecture to support document-based retrieval.
 
 ### Tested
 
 - TXT document loading.
-- Unsupported file type handling.
+- Text chunk generation.
+- Embedding generation using Gemini.
+- Vector serialization to `vectors.json`.
 
 ---
 
