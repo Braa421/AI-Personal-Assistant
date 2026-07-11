@@ -6,6 +6,24 @@ This project follows Semantic Versioning (SemVer).
 
 ---
 
+## [3.1.0] - 2026-07-11
+
+### Added
+
+- Implemented cosine similarity algorithm.
+- Added semantic similarity search.
+- Built the retrieval engine.
+- Added Top-K document retrieval.
+- Ranked retrieved chunks by similarity score.
+
+### Tested
+
+- Cosine similarity calculations.
+- Semantic document retrieval.
+- Top-K ranking.
+
+---
+
 ## [3.0.0] - 2026-07-10
 
 ### Added

@@ -29,6 +29,10 @@ The project focuses on building a modular and extensible assistant from scratch 
 - Configurable chunk overlap
 - Gemini embeddings
 - JSON vector store
+- Semantic similarity search
+- Cosine similarity
+- Top-K retrieval
+- Retrieval engine
 
 ## Project Structure
 
@@ -96,7 +100,7 @@ The project is divided into independent modules.
 
 ## Current Version
 
-**v3.0.0**
+**v3.1.0**
 
 ## Roadmap
 
@@ -109,7 +113,7 @@ The project is divided into independent modules.
 - [x] v2.4 — Reliability & Error Handling
 - [x] v2.5 — Reliability Enhancements (Logging & Retry)
 - [x] v3.0 — RAG Foundation
-- [ ] v3.1 — Similarity Retrieval
+- [x] v3.1 — Similarity Retrieval
 - [ ] v3.2 — RAG Pipeline
 - [ ] v3.3 — Multi-Document Support
 - [ ] v3.4 — Context Optimization
