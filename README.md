@@ -33,6 +33,9 @@ The project focuses on building a modular and extensible assistant from scratch 
 - Cosine similarity
 - Top-K retrieval
 - Retrieval engine
+- Complete RAG pipline
+- Context injection
+- Grounded document question answering
 
 ## Project Structure
 
@@ -100,7 +103,7 @@ The project is divided into independent modules.
 
 ## Current Version
 
-**v3.1.0**
+**v3.2.0**
 
 ## Roadmap
 
@@ -114,9 +117,11 @@ The project is divided into independent modules.
 - [x] v2.5 — Reliability Enhancements (Logging & Retry)
 - [x] v3.0 — RAG Foundation
 - [x] v3.1 — Similarity Retrieval
-- [ ] v3.2 — RAG Pipeline
+- [x] v3.2 — RAG Pipeline
 - [ ] v3.3 — Multi-Document Support
 - [ ] v3.4 — Context Optimization
+- [ ] v3.5 — Hybrid Search
+- [ ] v3.6 — Advanced RAG
 - [ ] v4.0 — MCP Support
 - [ ] v5.0 — Desktop Application
 - [ ] v6.0 — Voice Assistant

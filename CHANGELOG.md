@@ -6,6 +6,26 @@ This project follows Semantic Versioning (SemVer).
 
 ---
 
+## [3.2.0] - 2026-07-16
+
+### Added
+
+- Implemented the complete RAG pipeline.
+- Connected document retrieval with the request builder.
+- Added dynamic context construction from retrieved document chunks.
+- Injected retrieved context into LLM requests.
+- Improved prompt instructions to encourage grounded responses.
+- Separated retrieval, context generation, and request construction into independent modules.
+
+### Tested
+
+- Verified end-to-end RAG pipeline.
+- Confirmed responses are generated using retrieved document context.
+- Tested semantic retrieval with multiple document topics.
+- Verified grounding using custom document content.
+
+---
+
 ## [3.1.0] - 2026-07-11
 
 ### Added

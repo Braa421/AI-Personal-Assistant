@@ -13,11 +13,15 @@ from request_builder import(
     build_request
 )
 from llm import generate
-from google import genai
-import json
+from rag.loader import load_document
+from rag.chuncker import chunk_text
+from rag.vector_store import add_document
 
 memory = load_memory()
 conversation = load_conversation()
+text = load_document("notes.txt")
+chunks = chunk_text(text)
+add_document(chunks)
 
 print("Type 'exit' to quit.")
 

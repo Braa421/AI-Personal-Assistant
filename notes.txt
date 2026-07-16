@@ -1,5 +1,7 @@
-Artificial Intelligence is a field of computer science.
-Machine Learning is a subset of Artificial Intelligence.
-Deep Learning is a subset of Machine Learning.
-Neural Networks are widely used in modern AI systems.
-Large Language Models can understand and generate human language.
+My favorite programming language is Rust.
+
+The secret project code is ALPHA-7291.
+
+The company mascot is a blue penguin named Nori.
+
+The office opens every Saturday at 7:35 AM.
